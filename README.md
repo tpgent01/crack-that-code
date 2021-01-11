@@ -1,6 +1,6 @@
 # Crack That Code
 
-## ✨ Purpose
+## ⚡ Purpose
 A website that provides a timed quiz on JavaScript fundamentals and stores high scores. 
 
 * GIVEN I am taking a code quiz
