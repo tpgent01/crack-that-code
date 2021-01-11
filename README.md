@@ -15,6 +15,9 @@ A website that provides a timed quiz on JavaScript fundamentals and stores high 
 * WHEN the game is over
 * THEN I can save my initials and score
 
+## 🎨 Mock-Up
+![](mockup.gif)
+
 ## ✏️ Built With
 * HTML
 * CSS
