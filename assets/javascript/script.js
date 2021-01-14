@@ -45,3 +45,18 @@ let ulCreate = document.createElement("ul");
 
 
 // Timer Function
+timer.addEventListener("click", function() {
+    if (holdInterval == 0) {
+        holdInterval = setInterval(function() {
+            secondsLeft--;
+            currentTime.textContent = "Time: " + secondsLeft;
+
+            if (secondsLeft <= 0) {
+                clearInterval(holdInterval);
+                allDone();
+                currentTime.textContent = "Time's up!";
+            }
+        }, 1000);
+    }
+    render(questionIndex);
+});
