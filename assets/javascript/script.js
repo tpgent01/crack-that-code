@@ -118,3 +118,22 @@ function compare(event) {
     questionsEl.appendChild(createDiv);
 
 }
+
+
+// All done will append last page
+function allDone() {
+    questionsEl.innerHTML = "";
+    currentTime.innerHTML = "";
+
+    // Heading:
+    var createH1 = document.createElement("h1");
+    createH1.setAttribute("id", "createH1");
+    createH1.textContent = "All Done!"
+
+    questionsEl.appendChild(createH1);
+
+    // Paragraph
+    var createP = document.createElement("p");
+    createP.setAttribute("id", "createP");
+
+    questionsEl.appendChild(createP);
