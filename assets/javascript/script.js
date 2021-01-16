@@ -1,4 +1,3 @@
-//-- Variables --//
 // Array for questions
 let questions = [
     {
@@ -58,7 +57,7 @@ timer.addEventListener("click", function() {
             }
         }, 1000);
     }
-    render(questionIndex);
+    render(questionsIndex);
 });
 
 
@@ -70,7 +69,7 @@ function render(questionIndex) {
     // For loop for array
     for (let i = 0; i < questions.length; i++) {
         let userQuestion = questions[questionIndex].title;
-        let userChoice = questions[questionIndex].choices;
+        let userChoices = questions[questionIndex].choices;
         questionsEl.textContent = userQuestion;
     }
     // ForEach loop for question choices
@@ -170,4 +169,32 @@ function allDone() {
     createSubmit.textContent = "Submit";
 
     questionsEl.appendChild(createSubmit);
+
+    // Event listener to capture initials and local storage for initials and score
+    createSubmit.addEventListener("click", function() {
+        let initials = createInput.value;
+
+        if (initials === null) {
+
+            console.log("No value entered!");
+
+        } else {
+            let finalScore = {
+                initials: initials,
+                score: timeRemaining
+            }
+            console.log(finalScore);
+            let allScores = localStorage.getItem("allScores");
+            if (allScores === null) {
+                allScores = [];
+            } else {
+                allScores = JSON.parse(allScores);
+            }
+            allScores.push(finalScore);
+            let newScore = JSON.stringify(allScores);
+            localStorage.setItem("allScores", newScore);
+            // Goes to high score page
+            window.location.replace("./highscores.html");
+        }
+    });
 }
