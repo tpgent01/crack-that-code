@@ -1,4 +1,5 @@
-// Variables w/ array and object for questions
+//-- Variables --//
+// Array for questions
 let questions = [
     {
         title: "Commonly used data types DO NOT include:",
@@ -28,12 +29,11 @@ let questions = [
 
 ];
 
-// Score & Questions Variables
+// Variables for score
 let score = 0;
 let questionsIndex = 0;
 
-
-// Quiz Timer Variables
+// Variables for timer
 let currentTime = document.querySelector("#currentTime");
 let timer = document.querySelector("#startBtnEl");
 let questionsEl = document.querySelector("#questionsEl");
@@ -44,7 +44,7 @@ let pentalty = 10;
 let ulCreate = document.createElement("ul");
 
 
-// Timer Function
+// Function for timer
 timer.addEventListener("click", function() {
     if (holdInterval == 0) {
         holdInterval = setInterval(function() {
@@ -60,3 +60,61 @@ timer.addEventListener("click", function() {
     }
     render(questionIndex);
 });
+
+
+// Function to present questions
+function render(questionIndex) {
+    // Clears existing data
+    questionsEl.innerHTML = "";
+    ulCreate.innerHTML = "";
+    // For loop for array
+    for (let i = 0; i < questions.length; i++) {
+        let userQuestion = questions[questionIndex].title;
+        let userChoice = questions[questionIndex].choices;
+        questionsEl.textContent = userQuestion;
+    }
+    // ForEach loop for question choices
+    userChoices.forEach(function (newItem) {
+        var listItem = document.createElement("li");
+        listItem.textContent = newItem;
+        questionsEl.appendChild(ulCreate);
+        ulCreate.appendChild(listItem);
+        listItem.addEventListener("click", (compare));
+    })
+}
+
+
+// Compare choices - answers
+function compare(event) {
+    var element = event.target;
+
+    if (element.matches("li")) {
+
+        var createDiv = document.createElement("div");
+        createDiv.setAttribute("id", "createDiv");
+        // Correct condition 
+        if (element.textContent == questions[questionIndex].answer) {
+            score++;
+            createDiv.textContent = "Correct! The answer is:  " + questions[questionIndex].answer;
+            // Correct condition 
+        } else {
+            // Will deduct -5 seconds off secondsLeft for wrong answers
+            secondsLeft = secondsLeft - penalty;
+            createDiv.textContent = "Wrong! The correct answer is:  " + questions[questionIndex].answer;
+        }
+
+    }
+
+    // Question Index determines number question user is on
+    questionIndex++;
+
+    if (questionIndex >= questions.length) {
+        // All done will append last page with user stats
+        allDone();
+        createDiv.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " Correct!";
+    } else {
+        render(questionIndex);
+    }
+    questionsEl.appendChild(createDiv);
+
+}
