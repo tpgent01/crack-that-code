@@ -1,5 +1,5 @@
-// Array for questions
-let questions = [
+// Var with array and object for questions 
+var questions = [
     {
         title: "Commonly used data types DO NOT include:",
         choices: ["strings", "booleans", "alerts", "numbers"],
@@ -27,26 +27,31 @@ let questions = [
     },
 
 ];
+// Declared variables
+var score = 0;
+var questionIndex = 0;
 
-// Variables for score
-let score = 0;
-let questionsIndex = 0;
+// Start working code 
+// Declared variables
+var currentTime = document.querySelector("#currentTime");
+var timer = document.querySelector("#startTime");
+var questionsDiv = document.querySelector("#questionsDiv");
+var wrapper = document.querySelector("#wrapper");
 
-// Variables for timer
-let currentTime = document.querySelector("#currentTime");
-let timer = document.querySelector("#startBtnEl");
-let questionsEl = document.querySelector("#questionsEl");
-let wrapper = document.querySelector("#wrapper");
-let secondsLeft = 76;
-let holdInterval = 0;
-let pentalty = 10;
-let ulCreate = document.createElement("ul");
+// Seconds left is 15 seconds per question:
+var secondsLeft = 76;
+// Holds interval time
+var holdInterval = 0;
+// Holds penalty time
+var penalty = 10;
+// Creates new element
+var ulCreate = document.createElement("ul");
 
-
-// Function for timer
-timer.addEventListener("click", function() {
-    if (holdInterval == 0) {
-        holdInterval = setInterval(function() {
+// Triggers timer on button, shows user a display on the screen
+timer.addEventListener("click", function () {
+    // We are checking zero because its originally set to zero
+    if (holdInterval === 0) {
+        holdInterval = setInterval(function () {
             secondsLeft--;
             currentTime.textContent = "Time: " + secondsLeft;
 
@@ -57,144 +62,140 @@ timer.addEventListener("click", function() {
             }
         }, 1000);
     }
-    render(questionsIndex);
+    render(questionIndex);
 });
 
-
-// Function to present questions
+// Renders questions and choices to page: 
 function render(questionIndex) {
-    // Clears existing data
-    questionsEl.innerHTML = "";
+    // Clears existing data 
+    questionsDiv.innerHTML = "";
     ulCreate.innerHTML = "";
-    // For loop for array
-    for (let i = 0; i < questions.length; i++) {
-        let userQuestion = questions[questionIndex].title;
-        let userChoices = questions[questionIndex].choices;
-        questionsEl.textContent = userQuestion;
+    // For loops to loop through all info in array
+    for (var i = 0; i < questions.length; i++) {
+        // Appends question title only
+        var userQuestion = questions[questionIndex].title;
+        var userChoices = questions[questionIndex].choices;
+        questionsDiv.textContent = userQuestion;
     }
-    // ForEach loop for question choices
+    // New for each for question choices
     userChoices.forEach(function (newItem) {
-        let listItem = document.createElement("li");
+        var listItem = document.createElement("li");
         listItem.textContent = newItem;
-        questionsEl.appendChild(ulCreate);
+        questionsDiv.appendChild(ulCreate);
         ulCreate.appendChild(listItem);
         listItem.addEventListener("click", (compare));
     })
 }
-
-
-// Compare choices - answers
+// Event to compare choices with answer
 function compare(event) {
-    let element = event.target;
+    var element = event.target;
 
     if (element.matches("li")) {
 
-        let createEl = document.createElement("div");
-        createEl.setAttribute("id", "createEl");
+        var createDiv = document.createElement("div");
+        createDiv.setAttribute("id", "createDiv");
         // Correct condition 
         if (element.textContent == questions[questionIndex].answer) {
             score++;
-            createEl.textContent = "Correct! The answer is:  " + questions[questionIndex].answer;
+            createDiv.textContent = "Correct! The answer is:  " + questions[questionIndex].answer;
             // Correct condition 
         } else {
             // Will deduct -5 seconds off secondsLeft for wrong answers
             secondsLeft = secondsLeft - penalty;
-            createEl.textContent = "Wrong! The correct answer is:  " + questions[questionIndex].answer;
+            createDiv.textContent = "Wrong! The correct answer is:  " + questions[questionIndex].answer;
         }
 
     }
-
     // Question Index determines number question user is on
     questionIndex++;
 
     if (questionIndex >= questions.length) {
         // All done will append last page with user stats
         allDone();
-        createEl.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " Correct!";
+        createDiv.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " Correct!";
     } else {
         render(questionIndex);
     }
-    questionsEl.appendChild(createEl);
+    questionsDiv.appendChild(createDiv);
 
 }
-
-
 // All done will append last page
 function allDone() {
-    questionsEl.innerHTML = "";
+    questionsDiv.innerHTML = "";
     currentTime.innerHTML = "";
 
     // Heading:
-    let createH1 = document.createElement("h1");
+    var createH1 = document.createElement("h1");
     createH1.setAttribute("id", "createH1");
     createH1.textContent = "All Done!"
 
-    questionsEl.appendChild(createH1);
+    questionsDiv.appendChild(createH1);
 
     // Paragraph
-    let createP = document.createElement("p");
+    var createP = document.createElement("p");
     createP.setAttribute("id", "createP");
 
-    questionsEl.appendChild(createP);
+    questionsDiv.appendChild(createP);
 
     // Calculates time remaining and replaces it with score
-    if (secondsLeft >= 0) { 
-        let timeRemaining = secondsLeft;
-        let createP2 = document.createElement("p");
+    if (secondsLeft >= 0) {
+        var timeRemaining = secondsLeft;
+        var createP2 = document.createElement("p");
         clearInterval(holdInterval);
         createP.textContent = "Your final score is: " + timeRemaining;
 
-        questionsEl.appendChild(createP2);
+        questionsDiv.appendChild(createP2);
     }
 
     // Label
-    let createLabel = document.createElement("label");
+    var createLabel = document.createElement("label");
     createLabel.setAttribute("id", "createLabel");
     createLabel.textContent = "Enter your initials: ";
 
-    questionsEl.appendChild(createLabel);
+    questionsDiv.appendChild(createLabel);
 
-    // Input
-    let createInput = document.createElement("input");
+    // input
+    var createInput = document.createElement("input");
     createInput.setAttribute("type", "text");
     createInput.setAttribute("id", "initials");
     createInput.textContent = "";
 
-    questionsEl.appendChild(createInput);
+    questionsDiv.appendChild(createInput);
 
-    // Submit
-    let createSubmit = document.createElement("button");
+    // submit
+    var createSubmit = document.createElement("button");
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");
     createSubmit.textContent = "Submit";
 
-    questionsEl.appendChild(createSubmit);
+    questionsDiv.appendChild(createSubmit);
 
     // Event listener to capture initials and local storage for initials and score
-    createSubmit.addEventListener("click", function() {
-        let initials = createInput.value;
+    createSubmit.addEventListener("click", function () {
+        var initials = createInput.value;
 
         if (initials === null) {
 
             console.log("No value entered!");
 
         } else {
-            let finalScore = {
+            var finalScore = {
                 initials: initials,
                 score: timeRemaining
             }
             console.log(finalScore);
-            let allScores = localStorage.getItem("allScores");
+            var allScores = localStorage.getItem("allScores");
             if (allScores === null) {
                 allScores = [];
             } else {
                 allScores = JSON.parse(allScores);
             }
             allScores.push(finalScore);
-            let newScore = JSON.stringify(allScores);
+            var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
-            // Goes to high score page
+            // Travels to final page
             window.location.replace("./highscores.html");
         }
     });
+
 }

@@ -4,18 +4,16 @@
     top: 20%;
     width: 500px;
     height: 500px;
-    border: 1px soild indigo;
+    border: 1px solid indigo;
 }
-
-#startBtnEl {
-    background-color: indigo;
+#startTime {
+    background-color:indigo;
     margin-left: 33%;
     padding: 15px 32px;
     font-size: 20px;
     color: white;
 }
-
-#questionsEl {
+#questionsDiv {
     margin: 20px;
 }
 
@@ -24,7 +22,7 @@
 }
 
 #goBack {
-    background-color: indigo;
+    background-color:indigo;
     position: relative;
     padding: 10px;
     font-size: 20px;
@@ -35,6 +33,8 @@
     text-align: center;
     text-decoration: none;
 }
+
+
 
 #clear {
     background-color: indigo;
@@ -56,8 +56,6 @@ textarea {
     margin: 20px;
 }
 
-
-/* Submit Button */
 #Submit {
     background-color: indigo;
     margin-left: 33%;
@@ -88,45 +86,55 @@ li {
     color: white;
 }
 
-#createEl {
+#createDiv {
     margin-top: 20px;
     border-top: 1px solid lightgray;
 }
 
-
-/* MEDIA QUERIES */
-/* max-width: 786px */
+/* Start media queries */
+/* A Media Query max-width: 786px */
 @media screen and (max-width: 786px) {
-    body {
-        max-width: 786px;
-    }
-    #wrapper {
-        position: absolute;
-        left: 20%;
-    }
-    a {
-        margin-left: 20%
-    }
-    #goBack {
-        position: relative;
-        left: 55%;
-    }
-    #clear {
-        position: relative;
-        right: 5%;
-    }
+/* Resized content to fit 786px  */
+body {
+    max-width: 786px;
+}
+/* Resized main-content to fit 786px  */
+#wrapper {
+position: absolute;
+left: 20%;
 }
 
-/* max-width: 640px */
+a {
+margin-left: 20%;
+}
+#goBack {
+    
+    position: relative;
+    left: 55%;
+}
+
+#clear {
+    
+    position: relative;
+    right: 5%;
+    
+}
+}
+
+/* A Media Query max-width: 640px */
 @media screen and (max-width: 640px) {
-    body {
-        min-width: 640px;
-    }
-    #wrapper {
-        position: absolute;
-        left: 10%;
-    }
-      a {
-          margin-left: 10%;
-      }
+/* Resized content to fit 640px  */
+body {
+    min-width: 640px;
+}
+/* Resized main-content to fit 640px  */
+#wrapper {
+position: absolute;
+left: 10%;
+}
+a {
+  margin-left: 10%;
+}
+
+
 }

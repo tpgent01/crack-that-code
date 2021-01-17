@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
     <title>Crack That Code</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/javascript/script.js" defer></script>
-  </head>
+</head>
 
-  <body>
-    <!-- Link to highscores -->
-    <a href="highscores.html"> View Highscores</a>
-
+<body>
+    <a href="./highscores.html">View Highscores</a>
     <div id="wrapper">
-        <!-- Timer -->
         <div id="currentTime"></div>
-        <!-- Quiz Content -->
-        <div id="questionsEl">
+        <div id="questionsDiv">
             <h1>Crack That Code</h1>
-            <p>Try and answer the following code-related questions within the time limit. Keep in mind that
-                incorrect answers will penalize your your score time by 10 seconds!
-            </p>
-            <ul id="choicesEl"></ul>
-            <!-- Buttons -->
-            <button id="startBtnEl">Start Quiz!</button>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
+                answers
+                will penalize your score/time by ten seconds!</p>
+            <ul id="choicesUl"></ul>
+            <button id="startTime">Start Quiz</button>
         </div>
+
     </div>
+
+
     <script src="./assets/javascript/script.js"></script>
+
+
 </body>
 
 </html>
