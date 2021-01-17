@@ -8,7 +8,7 @@ var questions = [
     {
         title: "The condition in an if / else statement is enclosed within ____.",
         choices: ["1. Quotes", "2. Curly Brackets", "3. Parentheses", "4. Square Brackets"],
-        answer: "Parentheses"
+        answer: "Curly Brackets"
     },
     {
         title: "Arrays in Javascript can be used to store ____.",
