@@ -4,7 +4,6 @@
     top: 20%;
     width: 500px;
     height: 500px;
-    border: 1px solid indigo;
 }
 #startTime {
     background-color:indigo;
@@ -12,9 +11,12 @@
     padding: 15px 32px;
     font-size: 20px;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 #questionsDiv {
     margin: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
 }
 
 #currentTime {
@@ -32,6 +34,7 @@
     width: auto;
     text-align: center;
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -45,6 +48,7 @@
     top: 30%;
     right: 5%;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 button {
@@ -62,6 +66,7 @@ textarea {
     padding: 15px 32px;
     font-size: 20px;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 label {
@@ -84,6 +89,10 @@ li {
     width: 80%;
     font-size: 18px;
     color: white;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 8px;
+    height: 30px;
+    line-height: 30px;
 }
 
 #createDiv {
