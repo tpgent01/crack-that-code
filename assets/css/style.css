@@ -21,6 +21,7 @@
 
 #currentTime {
     float: right;
+    font-family: 'Roboto', sans-serif;
 }
 
 #goBack {
@@ -36,8 +37,6 @@
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
 }
-
-
 
 #clear {
     background-color: indigo;
