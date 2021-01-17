@@ -109,6 +109,7 @@ li {
     border-top: 1px solid lightgray;
 }
 
+
 /* Start media queries */
 /* A Media Query max-width: 786px */
 @media screen and (max-width: 786px) {
