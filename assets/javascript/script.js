@@ -2,28 +2,28 @@
 var questions = [
     {
         title: "Commonly used data types DO NOT include:",
-        choices: ["1. Strings", "2. Booleans", "3. Alerts", "4. Numbers"],
-        answer: "Alerts"
+        choices: ["strings", "booleans", "alerts", "numbers"],
+        answer: "alerts"
     },
     {
         title: "The condition in an if / else statement is enclosed within ____.",
-        choices: ["1. Quotes", "2. Curly Brackets", "3. Parentheses", "4. Square Brackets"],
-        answer: "Curly Brackets"
+        choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
+        answer: "curly brackets"
     },
     {
         title: "Arrays in Javascript can be used to store ____.",
-        choices: ["1. Numbers & Strings", "2. Other Arrays", "3. Booleans", "4. All of The Above"],
-        answer: "All of The Above"
+        choices: ["numbers and strings", "other arrays", "booleans", "all of the above"],
+        answer: "all of the above"
     },
     {
         title: "String values must be enclosed within ____ when being assigned to variables.",
-        choices: ["1. Commas", "2. Curly Brackets", "3. Quotes", "4. Parenthesis"],
-        answer: "Quotes"
+        choices: ["commas", "curly brackets", "quotes", "parenthesis"],
+        answer: "quotes"
     },
     {
         title: "A very useful tool for used during development and debugging for printing content to the debugger is:",
-        choices: ["1. Javascript", "2. Terminal / Bash", "3. For Loops", "4. Console Log"],
-        answer: "Console Log"
+        choices: ["Javascript", "terminal / bash", "for loops", "console log"],
+        answer: "console log"
     },
 
 ];
