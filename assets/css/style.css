@@ -102,7 +102,7 @@ li {
     transition: 0.5s;
     background-size: 200% auto;
     box-shadow: 0 0 20px #eee;
-    background-image: linear-gradient(to right, #4b0082 0%, #a6c1ee 51%, #4b0082 100%);
+    background-image: linear-gradient(to right, #4b0082 0%, #4169E1 51%, #4b0082 100%);
 }
 
 #createDiv {
