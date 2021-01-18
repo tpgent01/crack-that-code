@@ -3,7 +3,7 @@
 ## 📓Table of Contents
 * [Purpose](#purpose)
 * [Mock Up](#mock-up)
-* [Built With](#built-with)
+* [Built With](#Built-With)
 * [Installation](#installation)
 * [Website](#website)
 * [Contributing](#contributing)
