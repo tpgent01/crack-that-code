@@ -15,6 +15,14 @@ A website that provides a timed quiz on JavaScript fundamentals and stores high 
 * WHEN the game is over
 * THEN I can save my initials and score
 
+## 📓Table of Contents
+* [Mock Up](#mock-up)
+* [Built With](#built-with)
+* [Installation](#installation)
+* [Website](#website)
+* [Contributing](#contributing)
+* [Questions](#questions)
+
 ## 🎨 Mock-Up
 ![](mockup.gif)
 
@@ -22,11 +30,20 @@ A website that provides a timed quiz on JavaScript fundamentals and stores high 
 * HTML
 * CSS
 * Javascript
+* Google Fonts
+
+## 🔌Installation
+The user should clone the repository from GitHub and open up the project in the browser from the index file.
 
 ## 💻 Webiste
-https://tpgent01.github.io/crack-that-code/
+Please view deployed application at [Crack That Code](https://tpgent01.github.io/crack-that-code/)
 
 ![](website.gif)
 
-## 📌 Contribution
+## 📌Contributing
+Contributors should read the installation section.
+
+## ❓Questions
+If you have any questions about this projects, please contact me directly at tpgent01@outlook.com. 
+You can view more of my projects at https://github.com/tpgent01.
 Created by Taylor Gentry 👾
