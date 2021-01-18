@@ -10,7 +10,7 @@
 * [Questions](#questions)
 
 
-## ⚡ Purpose
+## ⚡Purpose
 A website that provides a timed quiz on JavaScript fundamentals and stores high scores. 
 
 * GIVEN I am taking a code quiz
@@ -26,11 +26,11 @@ A website that provides a timed quiz on JavaScript fundamentals and stores high 
 * THEN I can save my initials and score
 
 
-## 🎨 Mock-Up
+## 🎨Mock-Up
 ![](mockup.gif)
 
 
-## ✏️ Built With
+## ✏️Built With
 * HTML
 * CSS
 * Javascript
@@ -41,7 +41,7 @@ A website that provides a timed quiz on JavaScript fundamentals and stores high 
 The user should clone the repository from GitHub and open up the project in the browser from the index file.
 
 
-## 💻 Website
+## 💻Website
 Please view deployed application at [Crack That Code](https://tpgent01.github.io/crack-that-code/)
 
 ![](website.gif)
